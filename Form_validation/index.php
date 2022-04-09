@@ -19,10 +19,10 @@ Program : java script to form validation -->
         <section class="section">
 
             <h1>Personal Details</h1>
-            <form action="" method="post" onsubmit="validation()">
-                <input type="text" placeholder="Enter your name...." id="Firstname" max="15" autofocus required><br><br>
+            <form action="" method="post" id="form" onsubmit="validation(e)">
+                <input type="text" placeholder="Enter your name...." id="firstName" max="15" autofocus required><br><br>
                 <input type="email" placeholder="email@gmail.com" id="email" required><br><br>
-                <input type="tel" id="phone" placeholder="Enter your phone number" max="10" required><br><br>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required><br><br>
                 <input type="password" id="pass_one" placeholder="Enter your password...." max="10" required><br><br>
                 <input type="password" id="pass_two" placeholder="Confirm your password..." max="10" required><br><br>
                 <input type="reset" value="Reset">
@@ -32,5 +32,13 @@ Program : java script to form validation -->
     </center>
     <script src="validate.js"></script>
 </body>
+<script>
+    let form = document.getElementById('form')
+
+form.onsubmit = (e) => {
+    e.preventDefault();
+    alert('hello')
+}
+</script>
 
 </html>
