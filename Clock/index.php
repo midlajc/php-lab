@@ -1,9 +1,9 @@
-/*
+<!-- 
 Authour : Mubashir Angathil
 Date : 24-02-2022
 Time : 08:31 PM
 Program : Write java program to create clock with a timing event
-*/
+ -->
 
 <!DOCTYPE html>
 <html lang="en">

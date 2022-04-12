@@ -13,105 +13,51 @@ Program : Bio-data generation php
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio-Data</title>
-    <style>
-        article {
-            border: 1px solid black;
-            width: 37rem;
-            margin-left: 25rem;
-            padding-left: 2rem;
-            padding-top: 2rem;
-        }
-
-        select {
-            width: 22rem;
-            padding: .5rem;
-        }
-
-        #txtarea {
-            margin-top: 10rem;
-        }
-
-        input[type="submit"],
-        [type="reset"] {
-            padding-left: 2rem;
-            padding-right: 2rem;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            background: green;
-            border-radius: 2rem;
-            color: white;
-            margin-left: 8rem;
-            margin-top: 2rem;
-        }
-
-        input[type="text"],
-        [type="phone"],
-        [type="tel"],
-        [type="email"],
-        [type="date"],
-        [type="number"] {
-            padding: 1rem;
-            width: 20rem;
-            height:0.1rem;
-            margin-top: 1rem;;
-        }
-
-        .table {
-            width: 100%;
-        }
-
-        th {
-            width: 20%;
-        }
-        h1{
-            font-size: 3rem;;
-        }
-    </style>
 </head>
 
 <body>
-    <article>
+    <center>
         <h1 align="center">Bio Data Form</h1>
 
-        <form action="biodata.php" method="POST">
+        <form action="bioData.php" method="POST">
             <table class="table">
                 <tr>
                     <th>
-                        <label for="fullname">Full Name:</label>
+                        <label for="fullName">Full Name:</label>
                     </th>
                     <td>
-                        <input type="text" name="fullname"><br><br>
+                        <input type="text" name="fullName"><br><br>
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        <label for="fathername">Father's Name:</label>
+                        <label for="fatherName">Father's Name:</label>
                     </th>
                     <td>
-                        <input type="text" name="fathername"><br><br>
+                        <input type="text" name="fatherName"><br><br>
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        <label for="mothername">Mother's Name:</label>
+                        <label for="motherName">Mother's Name:</label>
                     </th>
                     <td>
-                        <input type="text" name="mothername"><br><br>
+                        <input type="text" name="motherName"><br><br>
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        <label for="bgroup">Blood Group:</label>
+                        <label for="bGroup">Blood Group:</label>
                     </th>
                     <td>
 
-                        <select name="bgroup">
+                        <select name="bGroup">
                             <option value="null" selected></option>
                             <?php
-                            $bgroup = array('A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-');
-                            foreach ($bgroup as $key) {
-                                $keylower = strtolower($key);
-                                echo "<option value=" . $keylower . ">" . $key . "</option>";
+                            $bGroup = array('A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-');
+                            foreach ($bGroup as $key) {
+                                $keyLower = strtolower($key);
+                                echo "<option value=" . $keyLower . ">" . $key . "</option>";
                             }
                             ?>
                         </select>
@@ -119,10 +65,10 @@ Program : Bio-data generation php
                 </tr>
                 <tr>
                     <th>
-                        <label for="phnum">Phone Number:</label>
+                        <label for="phNum">Phone Number:</label>
                     </th>
                     <td>
-                        <input type="tel" name="phnum" pattern="[0-9]{4}[0-9]{3}[0-9]{3}"><br><br><br>
+                        <input type="tel" name="phNum" ><br><br><br>
                     </td>
                 </tr>
                 <tr>
@@ -154,7 +100,7 @@ Program : Bio-data generation php
                 </tr>
                 <tr>
                     <th>
-                        <label for="address" id="txtarea">Address:</label>
+                        <label for="address" id="txtArea">Address:</label>
                     </th>
                     <td>
                         <textarea name="address" id="address" cols="45" rows="5" placeholder=" Type your address here....."></textarea><br><br>
@@ -162,11 +108,11 @@ Program : Bio-data generation php
                 </tr>
                 <tr>
                     <th>
-                        <label for="pincode">Pincode:</label>
+                        <label for="pinCode">Pin code:</label>
 
                     </th>
                     <td>
-                        <input type="number" name="pincode" placeholder="6 - - - - -"><br><br>
+                        <input type="number" name="pinCode" ><br><br>
 
                     </td>
                 </tr>
@@ -188,7 +134,7 @@ Program : Bio-data generation php
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </form>
-    </article>
+    </center>
 </body>
 
 </html>
