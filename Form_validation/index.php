@@ -45,13 +45,13 @@ Program : java script to form validation
             let password = document.getElementById('pass_one')
             let password2 = document.getElementById('pass_two')
             if(password.value.length<8){
-                err.push('password length must be grater than 8')
+                err.push('password must require minimum 8 characters')
             }
             if (password.value != password2.value) {
                 err.push("Password Mismatches");
             }
             let phone = document.getElementById('phone')
-            if(phone.value.length != 10);
+            if(phone.value.length != 10)
                 err.push('mobile number must be 10 digit');
             
             for(x in err){

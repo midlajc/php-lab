@@ -44,7 +44,6 @@ Program : Write java program to create clock with a timing event
                 .innerHTML = currentTime;
         }
 
-        showTime();
     </script>
 </body>
 
